@@ -1,33 +1,33 @@
-#include 'BrazoRobotico.h'
+#include "BrazoRobotico.h"
 #include <iostream>
 #include <string>
 using namespace std;
 
-BrazoRobotico::BrazoRobotico(double x, double y, double z){
-	x = x;
-	y = y;
-	z = z;
+BrazoRobotico::BrazoRobotico(double x_int, double y_int, double z_int){
+	x = x_int;
+	y = y_int;
+	z = z_int;
 }
-BrazoRobotico::getx(){
+double BrazoRobotico::getx(){
 	return x;
 }
-BrazoRobotico::gety(){
+double BrazoRobotico::gety(){
 	return y;
 }
-BrazoRobotico::getz(){
+double BrazoRobotico::getz(){
 	return z;
 }
-BrazoRobotico::estaSujetando(){
+bool BrazoRobotico::estaSujetando(){
 	return sujetando;
 }
-BrazoRobotico::coger(){
+void BrazoRobotico::coger(){
 	sujetando=true;
 }
-BrazoRobotico::soltar(){
+void BrazoRobotico::soltar(){
 	sujetando=false;
 }
-BrazoRobotico::mover(double x, double y,double z){
-	x = x;
-	y = y;
-	z = z;
+void BrazoRobotico::mover(double x_dest, double y_dest,double z_dest){
+	x = x_dest;
+	y = y_dest;
+	z = z_dest;
 }
